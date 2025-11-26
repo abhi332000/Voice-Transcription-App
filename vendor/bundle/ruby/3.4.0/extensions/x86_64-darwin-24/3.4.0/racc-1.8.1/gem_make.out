@@ -1,0 +1,18 @@
+current directory: /Users/apple/voice-transcription-app/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+/Users/apple/.rbenv/versions/3.4.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/apple/voice-transcription-app/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251126-50186-2pfxrd sitelibdir\=./.gem.20251126-50186-2pfxrd clean
+
+current directory: /Users/apple/voice-transcription-app/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251126-50186-2pfxrd sitelibdir\=./.gem.20251126-50186-2pfxrd
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/apple/voice-transcription-app/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251126-50186-2pfxrd sitelibdir\=./.gem.20251126-50186-2pfxrd install
+/usr/local/bin/ginstall -c -m 0755 cparse.bundle ./.gem.20251126-50186-2pfxrd/racc
+
+current directory: /Users/apple/voice-transcription-app/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251126-50186-2pfxrd sitelibdir\=./.gem.20251126-50186-2pfxrd clean

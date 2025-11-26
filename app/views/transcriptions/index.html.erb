@@ -1,0 +1,41 @@
+<div class="page-header">
+  <h2>Recent Transcriptions</h2>
+  <%= link_to "Create New Transcription", transcribe_path, class: "btn btn-primary" %>
+</div>
+
+<% if @transcriptions.any? %>
+  <div class="transcriptions-list">
+    <% @transcriptions.each do |transcription| %>
+      <div class="transcription-card">
+        <div class="transcription-header">
+          <span class="badge <%= transcription.status %>"><%= transcription.status.upcase %></span>
+          <span class="date"><%= transcription.created_at.strftime("%B %d, %Y %I:%M %p") %></span>
+        </div>
+
+        <% if transcription.content.present? %>
+          <div class="transcription-content">
+            <h4>Transcription:</h4>
+            <p><%= truncate(transcription.content, length: 200) %></p>
+          </div>
+        <% end %>
+
+        <% if transcription.summary.present? %>
+          <div class="transcription-summary">
+            <h4>Summary:</h4>
+            <p><%= transcription.summary %></p>
+          </div>
+        <% end %>
+
+        <div class="transcription-actions">
+          <%= link_to "View Details", transcription_path(transcription), class: "btn btn-secondary" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <div class="empty-state">
+    <h3>No transcriptions yet</h3>
+    <p>Create your first transcription by clicking the button above.</p>
+  </div>
+<% end %>
+
