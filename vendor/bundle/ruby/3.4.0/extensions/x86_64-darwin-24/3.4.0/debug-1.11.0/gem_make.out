@@ -1,0 +1,19 @@
+current directory: /Users/apple/voice-transcription-app/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+/Users/apple/.rbenv/versions/3.4.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/apple/voice-transcription-app/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251126-50186-9nn606 sitelibdir\=./.gem.20251126-50186-9nn606 clean
+
+current directory: /Users/apple/voice-transcription-app/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251126-50186-9nn606 sitelibdir\=./.gem.20251126-50186-9nn606
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+
+current directory: /Users/apple/voice-transcription-app/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251126-50186-9nn606 sitelibdir\=./.gem.20251126-50186-9nn606 install
+/usr/local/bin/ginstall -c -m 0755 debug.bundle ./.gem.20251126-50186-9nn606/debug
+
+current directory: /Users/apple/voice-transcription-app/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251126-50186-9nn606 sitelibdir\=./.gem.20251126-50186-9nn606 clean

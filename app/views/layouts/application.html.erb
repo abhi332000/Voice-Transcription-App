@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Voice Transcription App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <!-- Favicon using emoji -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎤</text></svg>">
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <h1>🎤 Voice Transcription</h1>
+        <div class="nav-links">
+          <%= link_to "Home", root_path, class: "nav-link" %>
+          <%= link_to "New Transcription", transcribe_path, class: "nav-link" %>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <%= yield %>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>Built with Rails 7 + StimulusJS + OpenAI</p>
+      </div>
+    </footer>
+  </body>
+</html>

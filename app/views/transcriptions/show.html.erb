@@ -1,0 +1,55 @@
+<div class="page-header">
+  <h2>Transcription Details</h2>
+  <%= link_to "← Back to List", root_path, class: "btn btn-secondary" %>
+</div>
+
+<div class="transcription-detail">
+  <div class="detail-header">
+    <span class="badge <%= @transcription.status %>"><%= @transcription.status.upcase %></span>
+    <span class="date">Created: <%= @transcription.created_at.strftime("%B %d, %Y at %I:%M %p") %></span>
+  </div>
+
+  <% if @transcription.content.present? %>
+    <div class="detail-section">
+      <div class="section-header">
+        <h3>Full Transcription</h3>
+        <button onclick="copyToClipboard('<%= j @transcription.content %>')" class="btn btn-secondary btn-small">
+          📋 Copy
+        </button>
+      </div>
+      <div class="transcription-box">
+        <%= simple_format(@transcription.content) %>
+      </div>
+    </div>
+  <% end %>
+
+  <% if @transcription.summary.present? %>
+    <div class="detail-section">
+      <h3>Summary</h3>
+      <div class="summary-box">
+        <%= simple_format(@transcription.summary) %>
+      </div>
+    </div>
+  <% elsif @transcription.status == "processing" %>
+    <div class="detail-section">
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>Generating summary...</p>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= link_to "New Transcription", transcribe_path, class: "btn btn-primary" %>
+    <%= link_to "← Back to List", root_path, class: "btn btn-secondary" %>
+  </div>
+</div>
+
+<script>
+  function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+      alert('Copied to clipboard!');
+    });
+  }
+</script>
+
