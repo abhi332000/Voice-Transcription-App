@@ -6,6 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
+/vendor/bundle
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -61,4 +62,16 @@ yarn-debug.log*
 
 # Ignore RSpec examples
 spec/examples.txt
+
+# Ignore documentation files (moved to Desktop)
+FEATURES.md
+SETUP_GUIDE.md
+TEST_RESULTS.md
+PROJECT_SUMMARY.md
+
+# Ignore bootsnap cache
+/tmp/cache/bootsnap*
+
+# Ignore credentials
+/config/credentials/*.key
 
